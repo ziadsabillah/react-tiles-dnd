@@ -217,7 +217,7 @@ export const useTileTable = <T>({
     tableHeight: table.length * elementHeight,
     tiles: positionedTiles,
     insertIndicatorPosition,
-    bind,
+    bind: enabled ? bind : undefined,
     renderTileProps,
   };
 };
