@@ -187,7 +187,7 @@ export const TilesContainer = <T,>(props: TilesContainerProps<T>) => {
             width: `${props.colSpan * tileWidth}px`,
             height: `${props.rowSpan * tileHeight}px`,
           }}
-          {...bind(props.data)}
+          {...(bind ? { ...bind(key) } : {})}
         >
           <TileUI {...props} renderTile={renderTile as any} />
         </div>
